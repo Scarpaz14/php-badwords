@@ -1,7 +1,7 @@
 
 <?php  
 
-    $text = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo iure unde veniam voluptatem ab facere provident amet reiciendis libero, ad labore obcaecati fugiat. Distinctio officia accusantium dolorem, cupiditate soluta veritatis.';    
+    $text = 'lorem ipsum dolor';    
     $bannedWord = $_GET['bannedWord'];
 ?>
 
@@ -19,6 +19,7 @@
 <body>
     <h1> Testo: <?php echo $text ?> </h1>
     <h3> Lunghezza testo: <?= strlen($text)?></h3>
+    <h1> testo con parole censurate: <?php echo str_replace($bannedWord, '***', $text)  ?></h1>
     
 </body>
 </html>

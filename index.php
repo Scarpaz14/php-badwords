@@ -3,10 +3,8 @@
 
     $text = 'lorem ipsum dolor';    
     $bannedWord = $_GET['bannedWord'];
+    $textBanned = str_replace($bannedWord, '***', $text)
 ?>
-
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -17,9 +15,10 @@
     <title>Document</title>
 </head>
 <body>
-    <h1> Testo: <?php echo $text ?> </h1>
+    <h1> Testo: <?= strtolower($text) ?> </h1>
     <h3> Lunghezza testo: <?= strlen($text)?></h3>
-    <h1> testo con parole censurate: <?php echo str_replace($bannedWord, '***', $text)  ?></h1>
+    <h1> testo con parole censurate: <?= str_replace($bannedWord,'***',$text)  ?></h1>
+    <h3> Lunghezza testo con parole censurate: <?= strlen($textBanned)?></h3>
     
 </body>
 </html>

@@ -17,7 +17,7 @@
 <body>
     <h1> Testo: <?= strtolower($text) ?> </h1>
     <h3> Lunghezza testo: <?= strlen($text)?></h3>
-    <h1> testo con parole censurate: <?= str_replace($bannedWord,'***',$text)  ?></h1>
+    <h1> testo con parole censurate: <?= $textBanned ?></h1>
     <h3> Lunghezza testo con parole censurate: <?= strlen($textBanned)?></h3>
     
 </body>
